@@ -1,0 +1,132 @@
+*{box-sizing: border-box;margin: 0;padding: 0}
+
+:root{
+    
+    --bg-main-color:#01A9DB;
+    --bg-main-color:#8A0868;
+    --bg-main-color:#585858;
+}
+
+html,body{width: 100%;height: 100%;}
+
+/*
+@-webkit-keyframes rotation{    
+    0%{-webkit-transform:rotateY(0deg);}    
+    100%{-webkit-transform:rotateY(-360deg);}
+}
+*/
+
+button{background-color: var(--bg-main-color);border: none;font-size: 200%;font-weight: bold;padding: 5px;width: 120px; border-radius: 8px;color: white;cursor: pointer;display:block;margin:10px auto}
+
+.Loto{-webkit-perspective:800;-webkit-perspective-origin:50% -50%;width: 300px;height: 300px;/*margin: 100px auto*/}
+
+.Loto-main{position: relative;-webkit-transform-style:preserve-3d;-webkit-animation: rotation 6s infinite;-webkit-animation-timing-function:linear;-webkit-transform-origin:center;transition-property: transform; transition-duration: 4s;}
+
+.Loto-main:hover{
+    -webkit-animation-play-state:paused;
+}
+
+.Loto-main > div{position: absolute}
+
+.Cadre{width: 200px;height: 100px;background-color: var(--bg-main-color);position: absolute;top:25px;border-top-right-radius: 2px;border-top-left-radius: 2px;border-bottom-left-radius: 2px}
+.Taxi{width: 50px;height: 20px;background-color: yellow;position: absolute;top:5px;left: 80px;text-align: center;border-top-left-radius: 100px;border-top-right-radius: 100px;}
+.Laman{width: 100px;height: 50px;background-color: var(--bg-main-color);position: absolute;left: 200px;top:75px;border-top-right-radius: 2px;border-bottom-right-radius: 10px}
+
+.S1,.S2{width: 60px; height: 40px;background-color: black;position: absolute;top: 35px;border-radius: 3px}
+.S3{width: 8px; height: 40px;background-color: black;position: absolute;top: 35px;left: 192px;border-top-left-radius: 100px;border-bottom-left-radius: 100px; }
+
+.j1,.j2{border-radius: 42px;width: 50px; height: 50px;background-color: black;position: absolute;top: 95px;transition-property: transform;transition-duration: 4s;}
+
+.j1,.j2{background-image: url(wheel.png);background-position: center;background-size: cover}
+
+.j1{left: 25px}
+.j2{left: 220px}
+.S1{left: 20px}
+.S2{left: 110px}
+
+.key1,.key2{border: 1px solid black;width: 10px;position: absolute;top: 80px}
+.key1{left: 30px}
+.key2{left: 120px}
+
+.face2{transition-property: transform;transform: translateZ(100px)}
+
+.face1 .Cadre ,.face1 .Laman{z-index: 5}
+.face1 .j1,.face1 .j2{z-index: 10}
+
+
+
+.face3{transition-property: transform;transform: translateZ(100px) rotateY(90deg)}
+
+.ass{width:100px;height: 90px;position: absolute;top: 25px;border-radius: 2px;background-color: var(--bg-main-color);padding: 5px}
+
+.ass .S{width: 100%;height: 40px;background-color: black;border-radius: 3px}
+
+.wheel{width:45px;height: 45px;border-radius: 50%;position: absolute;top: 52px;left: calc(50% - -28px);background-image: url(wheel.png);background-position: center;background-size: cover}
+
+.face3 .d1{width: 100px;height: 50px;position: absolute;top: 70px;border-radius: 10px;text-align: center;}
+.face3 .S{width: 95%; height: 38px;;margin: auto;margin-top: 10px;border-radius: 5px;}
+
+.face3 .lam{width: 15px;height: 15px;border-radius: 50%;background-color: #E6E6E6;margin: 4px;position: relative;margin-top: 15px}
+.face3 .lam::after{content: '';width: 13px;height: 5px;background-color: orange;position: absolute;bottom: -10px;left: 1px;border-radius: 5px}
+.face3 .lam1{float: left}
+.face3 .lam2{float: right}
+.face3 .matricule{padding: 2px;width: 45px;background-color: white;position: absolute;font-size: 45%;font-family: sans-serif;font-weight: bold;border-radius: 2px;transition-property: transform;transform:translateX(25px)translateY(25px)rotatey(180deg)}
+.face3 .chofo{width: 45px;height: 15px;position: absolute;background-color: grey;transition-property: transform;transform: translateX(25px)translateY(5px)}
+.face3 .chofo div{border-top: 1px solid black;margin: 1px}
+
+
+
+.face4{transition-property: transform;transform: translateZ(100px)translateY(30px)rotateX(-90deg);}
+
+.face5{transition-property: transform;transform: translateZ(100px)translateY(28px)rotateX(-90deg)}
+
+.face4 .tet{width: 200px;height: 100px;position: absolute;background-color: var(--bg-main-color);border-radius: 2px;}
+
+.face5 .tet{width: 200px;height: 100px;position: absolute;background-color: var(--bg-main-color);border-radius: 2px}
+
+
+.face6{left: 200px;top: 75px;transition-property: transform;transform: translateZ(100px) rotateX(-90deg)}
+
+.face6 .d1{width: 100px;height: 100px;position: absolute;background-color: var(--bg-main-color);border-top-right-radius: 2px;;border-bottom-right-radius: 2px;border: 2px solid black}
+
+.face7{left: 200px;top: 25px;transition-property: transform;transform: translateZ(100px) rotateY(90deg);}
+
+.face7 .d1{width: 100px;height: 100px;position: absolute;background-color: var(--bg-main-color);border-radius: 2px;}
+
+.face7 .S{width: 100%; height: 40px;background-color: black;position: absolute;top: 10px}
+
+
+.face8{left: 300px;top: 75px;transition-property: transform;transform: translateZ(100px) rotateY(90deg)}
+
+.face8 .d1{width: 100px;height: 50px;position: absolute;background-color: var(--bg-main-color);border-radius: 2px;text-align: center;}
+.face8 .S{width: 95%; height: 38px;background-color: black;margin: auto;margin-top: 10px;border-radius: 5px;}
+
+.face8 .lam{width: 15px;height: 15px;border-radius: 50%;background-color: #E6E6E6;margin: 4px;position: relative}
+.face8 .lam::after{content: '';width: 13px;height: 5px;background-color: orange;position: absolute;bottom: -10px;left: 1px;border-radius: 5px}
+.face8 .lam1{float: left}
+.face8 .lam2{float: right}
+.face8 .matricule{padding: 2px;width: 45px;background-color: white;position: absolute;font-size: 45%;font-family: sans-serif;font-weight: bold;border-radius: 2px;transition-property: transform;transform: translateX(25px)translateY(25px)}
+.face8 .chofo{width: 45px;height: 15px;position: absolute;background-color: grey;transition-property: transform;transform: translateX(25px)translateY(5px)}
+.face8 .chofo div{border-top: 1px solid black;margin: 1px}
+
+
+.face9{transition-property: transform;transform: translateZ(100px)translateY(125px)rotateX(-90deg);}
+
+.face9 .tet{width: 300px;height: 100px;position: absolute;background-color: var(--bg-main-color);border-radius: 2px;}
+
+
+
+
+.animate0{transform:translateX(30px)}
+.animate1{transform:translateX(700px)}
+.animate2{transform:translateX(700px)rotatey(-180deg)}
+.animate3{transform:translateX(0px)rotatey(-180deg)}
+.animate4{transform:translateX(0px)rotatey(-90deg)}
+.animate5{transform:translateX(0px)translateY(500px)rotatey(-90deg)}
+.animate6{transform:translateX(0px)translateY(500px)rotatey(0deg)}
+.animate7{transform:translateX(700px)translateY(500px)rotatey(0deg)}
+.animate8{transform:translateX(700px)translateY(500px)rotatey(90deg)}
+.animate9{transform:translateX(700px)translateY(0px)rotatey(90deg)}
+.animate10{transform:translateX(0px)translateY(0px)rotatey(180deg)}
+.animate11{transform:translateX(0px)translateY(0px)rotatey(0deg)}
+

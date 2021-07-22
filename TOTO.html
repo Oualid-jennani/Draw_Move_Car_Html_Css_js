@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="welcom to my web site">
+		<title>My Page 1</title>
+        <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+        <style>
+            
+
+            
+        </style>
+
+	</head>
+	<body>
+
+        <button class="start">>></button>
+        
+        
+        <div class="Rute">
+            <div class="Loto">
+                <div class="Loto-main animate0">
+                    <div class="face1">
+                        <div class="Cadre"></div>
+                        <div class="Laman"></div>
+                        <div class="S1"></div>
+                        <div class="S2"></div>
+                        <div class="S3"></div>
+                        <div class="j1"></div>
+                        <div class="j2"></div>
+                        <div class="key1"></div>
+                        <div class="key2"></div>
+                    </div>
+
+                    <div class="face2">
+                        <div class="Cadre"></div>
+                        <div class="Laman"></div>
+                        <div class="S1"></div>
+                        <div class="S2"></div>
+                        <div class="S3"></div>
+                        <div class="j1"></div>
+                        <div class="j2"></div>
+                        <div class="key1"></div>
+                        <div class="key2"></div>
+                    </div>
+                    <div class="face3">
+                        <div class="ass">
+                            <div class="S"></div>
+                        </div>
+                        <div class="wheel"></div>
+                        <div class="d1">
+                            <div class="S">
+                                <div class="matricule">MA 2020</div>
+                                <div class="lam lam1"></div>
+                                <div class="lam lam2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="face4">
+                        <div class="tet"></div>
+                    </div>
+                    <div class="face5">
+                        <div class="tet"></div>
+                    </div>
+                    <div class="face6">
+                        <div class="d1"></div>
+                    </div>
+                    <div class="face7">
+                        <div class="d1">
+                            <div class="S"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="face8">
+                        <div class="d1">
+                            <div class="S">
+                                <div class="chofo">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="matricule">MA 2020</div>
+                                <div class="lam lam1"></div>
+                                <div class="lam lam2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="face9">
+                        <div class="tet"></div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+        <script src="jQuery-3.3.1.js"></script>
+        <script>
+            var x =0,y=0,i=0;
+            
+            var snd = new Audio("oudio.wav"); 
+            
+            $(document).ready(function(){
+                
+                $('.start').click(function(){
+                    
+                    if(x==0){ snd.play(); }
+                    x++;
+                    
+                    for(i=1;i<=11;i++){$('.Loto-main').removeClass("animate"+i);}
+                    
+                    $('.Loto-main').addClass("animate"+x);
+                    
+                    y=y+360;
+                    
+                    $('.j1,.j2').css({transform:'rotate('+y+'deg)'})
+                    
+                    if(x==11){x=0}
+                })                
+            });
+            
+        
+        </script>
+        
+
+	</body>
+</html>
+
+
+
+
+
